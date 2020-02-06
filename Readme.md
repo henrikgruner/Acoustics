@@ -11,6 +11,7 @@ This program will focus on the angle. Three hydrophones is used to calculate the
 ### Hardware 
 STM32F767Zi is used to sample the audio. The microcontroller comes with 3x12 bits resolution ADC and DMA (Direct memory access), which is used to achieve a high-enough sampling frequency. Nyquist-theorem states that the sampling frequency must be 2 times the audio-frequency. The sampling frequency is currently 100kHz, but will probably be increased. 
 TODO -> discuss the hardware (boards).
+TODO -> Upload the STM32 code project.
 ### DSP
 A fourier transform is implemented to filter out non-wanted frequencies. Therefore, the main pingers frequency must be known beforehand. A FFT is only able to find frequencies equal to or less than the sampling frequency. To actually filter out the unwanted signals, their fourier coeffisients must be set to zero. Afterwards the code performs cross-correlation to fint the TDOA in the signals. 
 TODO -> More in detail.
